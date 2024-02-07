@@ -1,0 +1,109 @@
+:root {
+  --background-color: #ECEFF4;
+  --text-color: #1A202C;
+  --input-bg: #FFFFFF;
+  --input-text-color: #1A202C;
+  --button-bg: #4299E1;
+  --button-text-color: #FFFFFF;
+  --error-color: #EF4444;
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: 'Inter', sans-serif;
+  color: var(--text-color);
+}
+
+.openai-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:  100vh;
+  width:  100vw;
+}
+
+.centered-content {
+  width:  600px;
+  background-color: #FFFFFF;
+  border-radius:  10px;
+  padding:  20px;
+  box-shadow:  0  10px  15px -3px rgba(0,  0,  0,  0.1),  0  4px  6px -2px rgba(0,  0,  0,  0.05);
+}
+
+.message-history {
+  height:  300px; /* Set a fixed height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding:  10px;
+  border-radius:  10px;
+  background-color: #F3F4F6;
+  margin-bottom:  10px;
+  display: flex; /* Utiliser display: flex; pour assurer l'empilement vertical */
+  flex-direction: column;
+}
+
+.message-history p {
+  width: auto;
+  padding:  10px;
+  border-radius:  10px;
+  margin-bottom:  10px;
+}
+
+.user_msg {
+  text-align: right;
+  color: #1A202C;
+  background-color: #4299E1;
+  border-radius:  10px;
+  margin-left: auto; /* Aligner à droite */
+  margin-right: 10px;
+  margin-bottom:  10px;
+  padding:  10px;
+}
+
+input {
+  width:  100%;
+  height:  40px;
+  border-radius:  10px;
+  padding:  10px;
+  padding-left: 1px;
+  padding-right: 1px;
+  font-size:  1.2rem;
+  border:  1px solid #D1D5DB;
+  background: var(--input-bg);
+  color: var(--input-text-color);
+}
+
+input::placeholder {
+  color: #A0AEC0;
+}
+
+button {
+  background-color: var(--button-bg);
+  color: var(--button-text-color);
+  border: none;
+  padding:  10px  20px;
+  font-size:  1.2rem;
+  border-radius:  10px;
+  cursor: pointer;
+  margin-top:  10px;
+  width:  100%;
+  transition: background-color  0.2s ease;
+}
+
+button:hover {
+  background-color: #2B6CB0;
+}
+
+button:disabled {
+  background-color: #A0AEC0;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: var(--error-color);
+  margin-top:  10px;
+}
+h1{
+  display: flex;
+  justify-content: center;
+}
+
