@@ -38,8 +38,8 @@ const OpenAIRequest = () => {
         +" a qui David pourrait envoyer un questionnaire pour recueillir des " 
         +"feedbacks sur ses qualités et points forts si les discussion sont sans importance "
         +"les gens ne doivent pas etre compté dedans donc ne les indique pas dans le resultat que tu vas me donner " 
-        +"analyse bien les discussion pour etre sur que les personne le connaissent bien ou on eu des échange avec lui "
-        +"c'est tres important ?";
+        +"analyse bien les discussion pour etre sur que les personnes le connaissent personnellement ou qu'ils ont eu des échanges avec lui "
+        +"et les personnes doivent etre apte a répondre a des questions sur lui ?";
         userInputFromFile += question;
         if (!userInputFromFile.trim()) {
           alert('The file is empty. Please select a valid file.');
