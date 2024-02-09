@@ -26,7 +26,6 @@
 import React from 'react';
 import NewOpenAIRequest from './NewOpenAiRequest';
 import './index.css';
-
 const App = () => {
   return (
     <div>
