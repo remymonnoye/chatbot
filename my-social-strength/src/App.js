@@ -29,7 +29,6 @@ import './index.css';
 const App = () => {
   return (
     <div>
-      <h1>Find People</h1>
       <NewOpenAIRequest/>
     </div>
   );
