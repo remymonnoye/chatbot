@@ -33,7 +33,7 @@ const OpenAIRequest = () => {
       reader.onload = async () => {
         let userInputFromFile = reader.result;
         
-        const question = "D'apres les discussion par mail que tu as reçu donne moi uniquement les adresse mail des personnes" 
+        const question = "D'apres les discussion par mail que tu as reçu donne moi uniquement les adresse mail de 2 personnes" 
         +"a qui David pourrait envoyer un questionnaire pourrait envoyer un questionnaire pour recueillir des " 
         +"feedbacks sur ses qualités et points forts si les discussion sont sans importance "
         +"les gens ne doivent pas etre compté dedans donc ne les indique pas dans le resultat que tu vas me donner " 
