@@ -34,10 +34,11 @@ const OpenAIRequest = () => {
         let userInputFromFile = reader.result;
         
         const question = "D'apres les discussion par mail que tu as reçu donne moi uniquement les adresse mail des personnes" 
-        +"a qui David pourrait envoyer un questionnaire pour recueillir des " 
+        +" a qui David pourrait envoyer un questionnaire pour recueillir des " 
         +"feedbacks sur ses qualités et points forts si les discussion sont sans importance "
         +"les gens ne doivent pas etre compté dedans donc ne les indique pas dans le resultat que tu vas me donner " 
-        +"analyse bien les discussion pour etre sur que les personne le connaissent bien ou on eu des echange avec lui ?";
+        +"analyse bien les discussion pour etre sur que les personne le connaissent bien ou on eu des échange avec lui "
+        +"c'est tres important ?";
         userInputFromFile += question;
         if (!userInputFromFile.trim()) {
           alert('The file is empty. Please select a valid file.');

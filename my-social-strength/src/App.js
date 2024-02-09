@@ -30,7 +30,7 @@ import './index.css';
 const App = () => {
   return (
     <div>
-      <h1>OpenAI Integration in React</h1>
+      <h1>Find People</h1>
       <NewOpenAIRequest/>
     </div>
   );
