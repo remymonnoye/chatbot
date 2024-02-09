@@ -72,32 +72,36 @@ const OpenAIRequest = () => {
   //   generateResponse();
   // }
   // };
-  return (  
+  return (
     <div className="openai-container">
-      <div className="centered-content">
-          <div className="message-history">
-              {messageHistory.map((message, index) => (
-              <p key={index} className={message.role === 'user' ? 'user_msg' : ''}>
-                  <span>{message.content}</span>
+      <h1>Find People</h1>
+      <div className='centered-content'>
+        <div className="message-history">
+          {messageHistory.map((message, index) => (
+            message.role !== 'user' && (
+              <p key={index} className={message.role === 'assistant' ? 'assistant_msg' : ''}>
+                <span>{message.content}</span>
               </p>
-              ))}
-          </div>
-          <input
+            )
+          ))}
+        </div>
+        <input
           type="file"
           onChange={handleFileChange}
-          />
-          <button
-            type="submit"
-            aria-label="Send Message"
-            onClick={generateResponse}
-            disabled={loading || !selectedFile}
-          >
-            {loading ? 'Loading...' : 'Send'}
-          </button>
-            {error && <p className="error-message">{error}</p>}
-          </div>
+        />
+        <button
+          type="submit"
+          aria-label="Send Message"
+          onClick={generateResponse}
+          disabled={loading || !selectedFile}
+        >
+          {loading ? 'Loading...' : 'Send'}
+        </button>
+        {error && <p className="error-message">{error}</p>}
+    </div>
     </div>
   );
+  
 };
 
 export default OpenAIRequest;

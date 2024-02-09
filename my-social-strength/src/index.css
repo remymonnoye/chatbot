@@ -1,46 +1,45 @@
 :root {
-  --primary-color: #4299E1;
-  --secondary-color: #2B6CB0;
-  --gray-light: #D1D5DB;
-  --gray-dark: #A0AEC0;
-  --white: #FFFFFF;
-  --black: #1A202C;
-  --font-family: 'Inter', sans-serif;
+  --primary-color: #4b97fca5;
+  --secondary-color: #6C757D;
+  --success-color: #28A745;
+  --info-color: #17A2B8;
+  --warning-color: #FFC107;
+  --danger-color: #DC3545;
+  --light-color: #F8F9FA;
+  --dark-color: #343A40;
+  --font-family: 'Roboto', sans-serif;
 }
 
 body {
-  background-color: var(--white);
   font-family: var(--font-family);
-  color: var(--black);
+  background-color: var(--light-color);
+  color: var(--dark-color);
   margin:  0;
   padding:  0;
 }
 
 .openai-container {
-  display: flex;
+  display: grid;
+  align-content: center;
   justify-content: center;
-  align-items: center;
-  height:  100vh;
-  width:  100%;
+  height:  100vh; /* Full height of the viewport */
+  border-radius: 5px;
 }
 
 .centered-content {
-  max-width:  600px;
-  background-color: var(--white);
-  border-radius:  10px;
-  padding:  20px;
-  box-shadow:  0  10px  15px -3px rgba(0,  0,  0,  0.1),  0  4px  6px -2px rgba(0,  0,  0,  0.05);
+  max-width:  600px; /* Maximum width of the content */
+  
 }
 
+
+
 .message-history {
-  height:  300px;
+  flex:  1; /* Allow the message history to grow and take up available space */
   overflow-y: auto;
   padding:  10px;
   border-radius:  10px;
   background-color: #F3F4F6;
   margin-bottom:  10px;
-  display: flex;
-  flex-direction: column;
 }
 
 .message-history p {
@@ -49,29 +48,21 @@ body {
   margin-bottom:  10px;
 }
 
-.user_msg {
-  text-align: right;
+.assistant_msg {
   background-color: var(--primary-color);
   color: var(--white);
+  text-align: left;
   border-radius:  10px;
-  margin-left: auto;
-  margin-right:  10px;
+  margin-right: auto;
+  margin-left:  10px;
   margin-bottom:  10px;
 }
 
-input {
-  width:  100%;
-  height:  40px;
-  border-radius:  10px;
-  padding:  10px;
-  font-size:  1.2rem;
-  border:  1px solid var(--gray-light);
-  background: var(--white);
-  color: var(--black);
-}
 
-input::placeholder {
-  color: var(--gray-dark);
+input{
+  display: grid;
+  background-color: var(--secondary-color);
+  justify-content: center;
 }
 
 button {
@@ -88,22 +79,15 @@ button {
 }
 
 button:hover {
-  background-color: var(--secondary-color);
+  background-color: var(--success-color);
 }
 
 button:disabled {
-  background-color: var(--gray-dark);
+  background-color: var(--secondary-color);
   cursor: not-allowed;
 }
 
 .error-message {
-  color: var(--error-color);
+  color: var(--danger-color);
   margin-top:  10px;
-}
-
-h1 {
-  text-align: center;
-  font-size:  2.5rem;
-  font-weight: bold;
-  margin-bottom:  20px;
 }
